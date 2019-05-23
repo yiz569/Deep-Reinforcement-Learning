@@ -1,50 +1,15 @@
-# Stock Trading with Gym Environment
-A custom OpenAI gym environment for simulating stock trades on historical price data.
 
-## Installation of Stable_Baselines
+## Deep Reinforcement Learning via Market Making Research Project
 
-### Prerequisites
-Baselines requires python3 (>=3.5) with the development headers. You'll also need system packages CMake, OpenMPI and zlib. Those can be installed as follows
+### Alpha Vantage API
 
-#### Mac OS X
-Installation of system packages on Mac requires [Homebrew](https://brew.sh). With Homebrew installed, run the follwing:
-```bash
-brew install cmake openmpi
-```
-### Install using pip
-Install the Stable Baselines package
+We get historical and real-time trading data from [Alpha Vantage](https://www.alphavantage.co).
 
-Using pip from pypi:
-```
-pip install stable-baselines
-```
+### Limit Order Book
 
-Please read the [documentation](https://stable-baselines.readthedocs.io/) for more details and alternatives (from source, using docker).
+A limit order book is a record of unexecuted limit orders maintained by the security specialist who works at the exchange. We made a model of the limit order book simulating the real manipulations like add, remove, etc.
 
-## Installation of mpl_finance
-Install the mpl_finance package for plotting
+### Visualization
 
-Using pip from pypi:
-```
-pip install mpl_finance
-```
-
-## How to run
-
-### Get historical data
-To get historical stock price data from Alpha Vantage, run the following code:
-```
-python fetchdata.py
-```
-
-### Run the algorithm
-You can either render the result to a text file or visualize it
-```
-python main.py
-```
-Check the parameter of the render function for usage.
-
-## References
-
-If you'd like to learn about creating custom OpenAI gym environments, 
-check out the [Medium article](https://medium.com/@adamjking3/creating-a-custom-openai-gym-environment-for-stock-trading-be532be3910e)
+We used TradingGym toolkit for training and backtesting the reinforcement learning algorithms. This toolkit imitates
+the framework form of OpenAI Gym and helps visualize the process.
